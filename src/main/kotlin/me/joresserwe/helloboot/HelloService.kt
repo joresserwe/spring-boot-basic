@@ -1,5 +1,5 @@
 package me.joresserwe.helloboot
 
-interface HelloService {
+fun interface HelloService {
     fun sayHello(name: String): String
 }
