@@ -1,10 +1,10 @@
 package me.joresserwe.config.autoconfig
 
+import me.joresserwe.config.MyAutoConfiguration
 import org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory
 import org.springframework.context.annotation.Bean
-import org.springframework.context.annotation.Configuration
 
-@Configuration
+@MyAutoConfiguration
 class TomcatWebServerConfig {
     @Bean
     fun servletWebServerFactory() = TomcatServletWebServerFactory()

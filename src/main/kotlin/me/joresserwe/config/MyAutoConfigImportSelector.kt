@@ -1,12 +1,12 @@
 package me.joresserwe.config
 
+import org.springframework.boot.context.annotation.ImportCandidates
 import org.springframework.context.annotation.DeferredImportSelector
 import org.springframework.core.type.AnnotationMetadata
 
-class MyAutoConfigImportSelector : DeferredImportSelector{
-    override fun selectImports(importingClassMetadata: AnnotationMetadata) =
-        arrayOf(
-            "me.joresserwe.config.autoconfig.DispatcherServletConfig",
-            "me.joresserwe.config.autoconfig.TomcatWebServerConfig"
-        )
+class MyAutoConfigImportSelector(private val classLoader: ClassLoader) : DeferredImportSelector {
+    override fun selectImports(importingClassMetadata: AnnotationMetadata): Array<String> {
+        val load = ImportCandidates.load(MyAutoConfiguration::class.java, classLoader)
+        return load.map { it }.toTypedArray()
+    }
 }
