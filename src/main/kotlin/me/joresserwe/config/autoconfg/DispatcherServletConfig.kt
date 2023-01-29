@@ -1,16 +1,11 @@
-package me.joresserwe.helloboot
+package me.joresserwe.config.autoconfg
 
-import org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 import org.springframework.web.servlet.DispatcherServlet
 
 @Configuration
-class Config {
-
+class DispatcherServletConfig {
     @Bean
     fun dispatcherServlet() = DispatcherServlet()
-
-    @Bean
-    fun servletWebServerFactory() = TomcatServletWebServerFactory()
 }
