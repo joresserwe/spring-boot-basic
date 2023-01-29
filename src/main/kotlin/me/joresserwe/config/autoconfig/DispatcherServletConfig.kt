@@ -1,4 +1,4 @@
-package me.joresserwe.config.autoconfg
+package me.joresserwe.config.autoconfig
 
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration

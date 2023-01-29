@@ -1,4 +1,4 @@
-package me.joresserwe.config.autoconfg
+package me.joresserwe.config.autoconfig
 
 import org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory
 import org.springframework.context.annotation.Bean
