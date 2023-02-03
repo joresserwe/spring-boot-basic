@@ -2,6 +2,7 @@ package me.joresserwe.config.autoconfig
 
 import me.joresserwe.config.ConditionalMyOnClass
 import me.joresserwe.config.MyAutoConfiguration
+import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean
 import org.springframework.boot.web.embedded.jetty.JettyServletWebServerFactory
 import org.springframework.context.annotation.Bean
 
@@ -11,5 +12,6 @@ import org.springframework.context.annotation.Bean
 class JettyWebServerConfig {
 
     @Bean("jettyWebServerFactory")
+    @ConditionalOnMissingBean
     fun servletWebServerFactory() = JettyServletWebServerFactory()
 }
