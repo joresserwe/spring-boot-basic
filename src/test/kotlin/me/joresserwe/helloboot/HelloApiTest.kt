@@ -13,7 +13,7 @@ class HelloApiTest : FunSpec({
         // HTTPie
         val rest = TestRestTemplate()
         val response =
-            rest.getForEntity("http://127.0.0.1:8080/hello?name={name}", String::class.java, "Spring")
+            rest.getForEntity("http://127.0.0.1:8080/app/hello?name={name}", String::class.java, "Spring")
         response.statusCode shouldBe HttpStatus.OK
         response.headers.contentType.toString() shouldBe startWith(MediaType.TEXT_PLAIN_VALUE)
         response.body shouldBe "*Hello Spring*"

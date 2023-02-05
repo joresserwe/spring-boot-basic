@@ -9,4 +9,3 @@ class HellobootApplication
 fun main(args: Array<String>) {
     runApplication<HellobootApplication>(*args)
 }
-

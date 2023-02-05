@@ -1,3 +1,5 @@
 me.joresserwe.config.autoconfig.DispatcherServletConfig
 me.joresserwe.config.autoconfig.TomcatWebServerConfig
 me.joresserwe.config.autoconfig.JettyWebServerConfig
+me.joresserwe.config.autoconfig.PropertyPlaceholderConfig
+me.joresserwe.config.autoconfig.ServerPropertiesConfig
