@@ -14,7 +14,7 @@ annotation class UnitTest
 
 class HelloServiceTest : FunSpec({
     test("helloServiceTest") {
-        val helloService = SimpleHelloService()
+        val helloService = SimpleHelloService(getHelloRepository())
         val ret = helloService.sayHello("Test")
         ret shouldBe "Hello Test"
     }
@@ -25,3 +25,13 @@ class HelloServiceTest : FunSpec({
         ret shouldBe "*hello Test*"
     }
 })
+
+private fun getHelloRepository() = object : HelloRepository {
+    override fun findHello(name: String): Hello? {
+
+        return null
+    }
+
+    override fun increaseCount(name: String) {
+    }
+}
