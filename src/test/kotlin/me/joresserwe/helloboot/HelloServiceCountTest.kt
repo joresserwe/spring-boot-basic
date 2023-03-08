@@ -2,8 +2,9 @@ package me.joresserwe.helloboot
 
 import io.kotest.core.spec.style.FunSpec
 import io.kotest.matchers.shouldBe
+import org.springframework.boot.test.context.SpringBootTest
 
-@HellobootTest
+@SpringBootTest
 class HelloServiceCountTest(
     private val helloService: HelloService,
     private val helloRepository: HelloRepository

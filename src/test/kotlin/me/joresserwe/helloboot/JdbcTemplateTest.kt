@@ -2,9 +2,10 @@ package me.joresserwe.helloboot
 
 import io.kotest.core.spec.style.FunSpec
 import io.kotest.matchers.shouldBe
+import org.springframework.boot.test.autoconfigure.jdbc.JdbcTest
 import org.springframework.jdbc.core.JdbcTemplate
 
-@HellobootTest
+@JdbcTest
 class JdbcTemplateTest(
     private val jdbcTemplate: JdbcTemplate,
 

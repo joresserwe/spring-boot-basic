@@ -1,9 +1,10 @@
 package me.joresserwe.helloboot
 
 import io.kotest.core.spec.style.FunSpec
+import org.springframework.boot.test.autoconfigure.jdbc.JdbcTest
 import javax.sql.DataSource
 
-@HellobootTest
+@JdbcTest
 class DataSourceTest(
     private val dataSource: DataSource
 ) : FunSpec() {

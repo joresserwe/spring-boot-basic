@@ -30,7 +30,6 @@ dependencies {
     implementation("hikari-cp:hikari-cp:3.0.1")
     runtimeOnly("com.h2database:h2:2.1.214")
 
-
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
